@@ -18,7 +18,7 @@ const HTTP_ERROR = {
   504: '网关超时。',
 };
 
-const requestArr = [];
+const requestArr: string[] = [];
 
 interface Options {
   method?: 'GET' | 'OPTIONS' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' | 'TRACE' | 'CONNECT' | undefined;
@@ -107,6 +107,7 @@ const request = (url: string, options: Options): Promise<void> => {
         mask: true,
       });
     }
+    requestArr.push(url);
     const { method = 'GET', header } = options;
     Taro.request({
       method,
