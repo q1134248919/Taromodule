@@ -6,5 +6,9 @@ module.exports = {
     REQUEST_URL: '"http://localhost:80"',
   },
   mini: {},
-  h5: {},
+  h5: {
+    devServer: {
+      hot: false,
+    },
+  },
 };
