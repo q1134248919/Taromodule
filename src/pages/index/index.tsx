@@ -10,6 +10,7 @@ type IProps = {};
 
 const GoodsDetailPage: React.FC<IProps> = (props: IProps) => {
   const {} = props;
+  console.log('1');
   const [obj, setObj] = useState({});
   const data = [
     { genre: 'Sports', sold: 275 },
